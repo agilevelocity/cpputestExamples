@@ -1,7 +1,7 @@
 
 #include <CppUTest/TestHarness.h>
 #include <CppUTest/CommandLineTestRunner.h>
-
+#include <CppUTestExt/MockSupport.h>
 #include "StrCalc.h"
 
 // Exec unit tests
@@ -22,6 +22,7 @@ TEST_GROUP(strCalcTests)
 	void teardown()
 	{
 		delete calc;
+    mock().clear();
 	}
 
 };

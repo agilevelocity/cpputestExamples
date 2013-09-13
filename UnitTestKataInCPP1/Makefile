@@ -1,12 +1,12 @@
 CC=gcc
 CPP=g++
 
-IDIR=../cpputest/include
+IDIR=$(CPPUTEST_HOME)/include
 CFLAGS=-I$(IDIR) -Wall
 
-LDIR=-L../cpputest/lib
+LDIR=-L$(CPPUTEST_HOME)/lib
 
-LIBS=-lCppUTest
+LIBS=-lCppUTest -lCppUTestExt
 
 DEPS = StrCalc.h
 

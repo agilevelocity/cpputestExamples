@@ -1,4 +1,6 @@
 #include <CppUTest/CommandLineTestRunner.h>
+#include <CppUTest/TestHarness.h>
+#include <CppUTestExt/MockSupport.h>
 
 // Externs for functions under test
 extern "C"{
@@ -14,7 +16,10 @@ int main(int ac, char** av)
 // Test group and unit tests
 TEST_GROUP(strCalcTests)
 {
-
+  void teardown()
+  {
+    mock().clear();
+  }
 };
 
 // Sample test 
